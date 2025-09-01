@@ -1,4 +1,4 @@
-Avatar Selection
+::Avatar Selection
 
 <div class="player-message">
 <h1>Avatars</h1>
@@ -40,4 +40,5 @@ Click here to [[select Mykosai Trenholm|Mykosai Trenholm]]
 </div>
 Click here to [[select Arinaya Velin|Arinaya Velin]]
 </div>
+
 </div>
