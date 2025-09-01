@@ -1,0 +1,43 @@
+Avatar Selection
+
+<div class="player-message">
+<h1>Avatars</h1>
+<p>Select an <span class="glossary-link">(link: "avatar.")[(display: "Def:Avatar")]</span> Look for a profile that reflects your personal strengths and core values—this decision will influence your journey and experiences within the game by determining initial <span class="glossary-link">(link: "variable")[(display: "Def:Variable")]</span> counts in five categories: Analysis, Empathy, Exploration, Foresight, and Imagination.
+<div class="call-out">
+<img src="https://github.com/kizsak/VaultImages/raw/main/Veynari.png" alt="Veynari Al-Majeed">
+<h3>Veynari Al-Majeed</h3>
+**Major**: Immersive Storytelling<br>**Skills**: Crafting emotional, interactive narratives, designing impactful experiences<br>**Strengths**: Empathy, Imagination
+</div>
+Click here to [[select Veynari Al-Majeed|Veynari Al-Majeed]]
+<div class="call-out">
+<img src="https://github.com/kizsak/VaultImages/raw/main/Zyphira.png" alt="Zyphira Chen-Dalal">
+<h3>Zyphira Chen-Dalal</h3>
+**Major**: Bioengineering<br>**Skills**: Designing ecosystems, manipulating plant biology, blending technology with nature<br>**Strengths**: Analysis, Exploration
+</div>
+Click here to [[select Zyphira Chen-Dalal|Zyphira Chen-Dalal]]
+<div class="call-out">
+<img src="https://github.com/kizsak/VaultImages/raw/main/Zhaedrik.png" alt="Zhaedrik El-Amar">
+<h3>Zhaedrik El-Amar</h3>
+**Major**: Data Cartography<br>**Skills**: Mapping and visualizing abstract data, connecting patterns, uncovering hidden relationships<br>**Strengths**: Exploration, Analysis
+</div>
+Click here to [[select Zhaedrick El-Amar|Zhaedrick El Amar]]
+<div class="call-out">
+<img src="https://github.com/kizsak/VaultImages/raw/main/Kaelith.png" alt="Kaelitha Jindall">
+<h3>Kaelitha Jindall</h3>
+**Major**: Data Ethics<br>**Skills**: Evaluating the moral implications of technology, designing systems that prioritize fairness and humanity<br>**Strengths**: Empathy, Foresight
+</div>
+Click here to [[select Kaelitha Jindall|Kaelitha Jindall]]
+<div class="call-out">
+<img src="https://github.com/kizsak/VaultImages/raw/main/Mykosai.png" alt="Mykosai Trenholm">
+<h3>Mykosai Trenholm</h3>
+**Major**: Geothermal Engineering<br>**Skills**: Harnessing earth’s energy, solving infrastructure problems, and ensuring sustainability<br>**Strengths**: Foresight, Analysis
+</div>
+Click here to [[select Mykosai Trenholm|Mykosai Trenholm]]
+<div class="call-out">
+<img src="https://github.com/kizsak/VaultImages/raw/main/Arinaya.png" alt="Arinaya Velin">
+<h3>Arinaya Velin</h3>
+**Major**: Post-Collapse Linguistics<br>**Skills**: Deciphering ancient texts, understanding lost languages, unraveling historical contexts<br>**Strengths**: Empathy, Analysis
+</div>
+Click here to [[select Arinaya Velin|Arinaya Velin]]
+</div>
+</div>
