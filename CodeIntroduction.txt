@@ -1,0 +1,147 @@
+::Introduction
+<div class="player-message">
+<h1>INST388Q: Interactive Fiction</h1>
+<h2>Dr. Kate Izsak</h2>
+<h3>//Principal Lecturer<br>Associate Dean for Strategic Initiatives//<br>College of Information<br>University of Maryland</h3>
+<img src="https://github.com/kizsak/VaultImages/raw/main/TwineScreen.png" alt="Illustration of a Twine story map">
+Welcome to //INST388Q Interactive Fiction//! The entire course will take place in this game, where you will play out a piece of interactive fiction that is half story-game and half instructional material. You will work through content on the history and theory of interactive fiction, narrative structures as they relate to interactive fiction, narrative genres within the context of interactive fiction, interactive fiction design theory, use of Twine, Harlowe markup language, and some basic CSS/HTML coding.
+
+While most of the story is happening within Twine, you will see //some// links to external sources. These links include published Twine games I have selected for you, externally developed puzzles and games, and links to ELMS assignments to submit your work. When you submit an assignment on ELMS, you will receive feedback from me and a four-digit code. You will enter this code into a user input box, and you will be allowed to continue in the game. There are five assignments.
+
+Are you BRAND NEW to interactive fiction or specifically to hypertext fiction? Here's a [[quick explanation.|BeginnersGuide]]
+
+When you see text that looks like this, it is a message from the gamerunner—me—to the player—you. It exists outside the narrative.</p>
+</div>
+
+<p>When you see text like this, it means there is a term on the page defined in the <span class="glossary-link">(link: "glossary.")[(display: "Def:Glossary")]</span>
+</p>
+
+<div class="variable-display">
+When you see text that looks like this, it indicates the state of your global variable counts: Analysis, Empathy, Exploration, Foresight, and Imagination. You will accrue points in these values based on the choices you make during the first third of the story, at which point, your variable counts will determine a set of 3 narrative structures and a set of 3 fiction genres that you will study in more depth. Options of fiction genres will include:
+<span style="color: orange;">✦</span> Action and Adventure 
+<span style="color: orange;">✦</span> Humor and Satire 
+<span style="color: orange;">✦</span> Mystery, Thriller, and Crime 
+<span style="color: orange;">✦</span> Philosophical 
+<span style="color: orange;">✦</span> Realistic 
+<span style="color: orange;">✦</span> Romance and Relationship 
+<span style="color: orange;">✦</span> Speculative 
+
+Options of narrative structures will include:
+<span style="color: orange;">✦</span> Cascade 
+<span style="color: orange;">✦</span> Hub-and-Spoke 
+<span style="color: orange;">✦</span> Open Map 
+<span style="color: orange;">✦</span> Puzzle-Based 
+<span style="color: orange;">✦</span> Recursive 
+<span style="color: orange;">✦</span> Triggered Progression 
+
+An example of a potential match: a player whose top value is imagination will have the chance to study speculative fiction—and its unique place amongst interactive fiction genres. A player whose top value is analysis will have the chance to study puzzle-based narratives. Players will be restricted to these options for two assignments; one is a 10-15<span class="glossary-link"> (link: "passage")[(display: "Def:Passage")]</span>Twine story and the other is a 20-25 passage Twine story. For your final project--a Twine story of your own design of at least 50 passages--you may work without restrictions. 
+</div>
+
+<div class="player-message">There will also be other font and color changes periodically that are intended to help the user make sense of and easily categorize the information being provided.
+</div>
+
+<div class="assigned-reading">
+For instance, this box will indicate some of the most important information necessary to successfully complete course assignments.
+</div>
+
+<div class="call-out">
+You might see some other important information—items I particularly want to highlight—in a box like this.</p>
+</div>
+
+<div class="neon-wrap hueshift">
+<span class="neon-sign pulse">This text will highlight really, really important stuff!</span>
+</div>
+
+<div class="memory-doc ghost-heavy jitter glitch dropout" data-shadow="If you see text like this...">
+<span class="noise-overlay"></span>
+<span class="memoryText">If you see text like this... </span>
+<i class="glitch-slice s1"></i>
+<i class="glitch-slice s2"></i>
+<i class="glitch-slice s3"></i>
+...you are viewing corrupted digital files.
+</div>
+
+<div class="memoryFlash"><span class="dreamy-text">If you see text that looks like this...</span> 
+...you are inside a dreamlike state where you can consume corrupted, archived audio material.
+</div>
+
+
+<div class="terminal">
+When you see text like this, it means that you are using a computer terminal within the story.
+</div>
+
+<div class="audiogram-paper typewritten">
+<div class="transcript-meta">
+<span class="transcript-stamp">Audiogram</span>
+<span class="transcript-stamp">Recorded: 2024-08-27</span>
+<span class="transcript-stamp">Subject: Transcript Text</span>
+</div>
+<div class="transcript-line">
+<span class="fold" aria-hidden="true"></span>
+IZSAK: Text like this means you are reviewing a transcript of historical audio archive files.
+</div>
+</div>
+
+<div class="memory-error">You might also see error messages like these--they are part of the story!</div>
+
+<div class="vd">
+<div class="vd-frame">
+<div class="vd-desktop">
+<div class="vd-monitor">
+<div class="vd-head">
+<div class="vd-title">
+File Browser
+</div>
+</div>
+<div class="vd-screen">
+<div class="vd-tree">
+<details open>
+<summary class="vd-row"><span class="vd-caret"></span><span class="vd-ico">📁</span> When you see text like this...</summary>
+<div class="vd-nest"><div class="vd-file"><span class="vd-bullet"></span><span class="vd-ico">📄</span> ...it means you have been given access to a character's virtual desktop circa 2045. You should review all of the documents you see in it to reveal parts of the story. 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="cat-say">
+<span class="paw tl">🐾</span>
+<span class="paw tr">🐾</span>
+<span class="paw bl">🐾</span>
+<span class="paw br">🐾</span>
+<span class="tail">You might meet some cats who send you messages that look like this.
+</div>
+
+<a href="https://github.com/kizsak/VaultCodeSnippets/blob/main/CodeAvatarSelection.txt" download=".txt file of my code for avatar selection">
+  <img src="https://github.com/kizsak/VaultCodeSnippets/raw/main/StealMyCode.png" alt="Steal my code button" style="max-width:300px; cursor:pointer;">
+</a>
+<p>If you see an image like this, click on it to steal my code (in case you like something I did enough to try it yourself!</p>
+
+
+<img src="https://github.com/kizsak/VaultImages/raw/main/FullGlossary.png">
+<p>You can also view the [[full glossary|FullGlossary]] at any time—there is a link in the footer panel of every passage.
+<br><br>
+<img src="https://github.com/kizsak/VaultImages/raw/main/FooterPanel.png" alt="Screenshot of the game's footer panel">
+<p>The text above is in your footer panel--it will show up on MOST (80-90%) of the pages in the story; there are just a few where I withheld that feature to support the design of certain passages. You can save your game at any time--click (link: "Save Game")[(save-game: "quicksave")]. You will know it worked if the link to save the game disappears from the footer panel. When you return to the game--you can start again [[at the first passage|START]]. Click (link: "Load Game")[(load-game: "quicksave")] on the start passage and it will return you to your saved place in the game. </p>
+
+<div class="player-message">
+A last word before you begin? Here are some things to expect in this story:
+<span style="color: orange;">✦</span> The narrative will unfold in fragments, often giving you multiple paths.
+<span style="color: orange;">✦</span> Your decisions affect what you see, discover, and unlock.
+<span style="color: orange;">✦</span> Some passages may include puzzles, interactive systems, or even hidden mechanics.
+<span style="color: orange;">✦</span> You may see your traits or variables change as you play—reflecting how your choices shape your character.
+<span style="color: orange;">✦</span> There’s no single “right” path. Interactive fiction is about exploration and discovery.
+<span style="color: orange;">✦</span> Try clicking every link; sometimes they reveal more than one layer of the story.
+<span style="color: orange;">✦</span> Don’t be afraid to backtrack or replay—interactive fiction is built for multiple runs.
+<span style="color: orange;">✦</span> Pay attention to words, symbols, or mechanics that reappear; they often hint at deeper story connections.
+
+And finally, enjoy the blend of reading and playing—think of it as part novel, part game, part instruction manual, and part teaching and learning experiment!
+</div>
+
+<div class="goldPulseBox">
+[[BEGIN NEW GAME|Exposition]]
+</div>
+
+<p>//NB: View my acknowledgements page [[here.|Mentions]]//</p>
