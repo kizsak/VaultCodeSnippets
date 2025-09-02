@@ -1,0 +1,110 @@
+::Avatar Options
+::Veynari
+(set: $avatar to "Veynari Al-Majeed")
+(set: $Empathy to $Empathy + 2)
+(set: $Imagination to $Imagination + 1)
+<div class="player-message">
+<h1>Welcome, Veynari!</h1>
+<img src="https://github.com/kizsak/VaultImages/raw/main/Veynari.png" alt="Veynari Al-Majeed"></div>
+
+<div class="variable-display">
+Your attributes are as follows: 
+| Analysis | $Analysis |
+| Empathy | $Empathy |
+| Exploration | $Exploration |
+| Foresight | $Foresight |
+| Imagination | $Imagination |
+</div>
+
+<div class="player-message">What classes are you taking this semester, [[$avatar?|PrepareForSemester]]</div>
+
+
+::Zyphira
+(set: $avatar to "Zyphira Chen-Dalal")
+(set: $Analysis to $Analysis + 2)
+(set: $Exploration to $Exploration + 1)
+<div class="player-message">
+<h1>Welcome, Zyphira!</h1>
+<img src="https://github.com/kizsak/VaultImages/raw/main/Zyphira.png" alt="Zyphira Chen-Dalal"></div>
+
+<div class="variable-display">
+Your attributes are as follows: 
+| Analysis | $Analysis |
+| Empathy | $Empathy |
+| Exploration | $Exploration |
+| Foresight | $Foresight |
+| Imagination | $Imagination |
+</div>
+
+
+::Zhaedrick
+(set: $avatar to "Zhaedrick El-Amar")
+(set: $Analysis to $Analysis + 1)
+(set: $Exploration to $Exploration + 2)
+<div class="player-message">
+<h1>Welcome, Zhaedrick!</h1>
+<img src="https://github.com/kizsak/VaultImages/raw/main/Zhaedrik.png" alt="Zhaedrick El-Amar"></div>
+
+<div class="variable-display">
+Your attributes are as follows: 
+| Analysis | $Analysis |
+| Empathy | $Empathy |
+| Exploration | $Exploration |
+| Foresight | $Foresight |
+| Imagination | $Imagination |
+</div>
+
+
+::Kaelitha
+(set: $avatar to "Kaelitha Jindall")
+(set: $Empathy to $Empathy + 2)
+(set: $Foresight to 1)
+<div class="player-message">
+<h1>Welcome, Kaelitha!</h1>
+<img src="https://github.com/kizsak/VaultImages/raw/main/Kaelith.png" alt="Kaelitha Jindall"></div>
+
+<div class="variable-display">
+Your attributes are as follows: 
+| Analysis | $Analysis |
+| Empathy | $Empathy |
+| Exploration | $Exploration |
+| Foresight | $Foresight |
+| Imagination | $Imagination |
+</div>
+
+
+::Mykosai
+(set: $avatar to "Mykosai Trenholm")
+(set: $Analysis to $Analysis + 1)
+(set: $Foresight to $Foresight + 2)
+<div class="player-message">
+<h1>Welcome, Mykosai!</h1>
+<img src="https://github.com/kizsak/VaultImages/raw/main/Mykosai.png" alt="Mykosai Trenholm"><div>
+
+<div class="variable-display">
+Your attributes are as follows: 
+| Analysis | $Analysis |
+| Empathy | $Empathy |
+| Exploration | $Exploration |
+| Foresight | $Foresight |
+| Imagination | $Imagination |
+</div>
+
+
+::Arinaya
+set: $avatar to "Arinaya Velin")
+(set: $Empathy to $Empathy + 2)
+(set: $Analysis to $Analysis + 1)
+
+<div class="player-message">
+<h1>Welcome, Arinaya!</h1>
+<img src="https://github.com/kizsak/VaultImages/raw/main/Arinaya.png" alt="Arinaya Velin"></div>
+
+<div class="variable-display">
+Your attributes are as follows: 
+| Analysis | $Analysis |
+| Empathy | $Empathy |
+| Exploration | $Exploration |
+| Foresight | $Foresight |
+| Imagination | $Imagination |
+</div>
