@@ -1,0 +1,16 @@
+::Directional Navigation
+<p>|viewHook>[ ]
+(link: "Look forward.")[
+(replace: ?viewHook)[
+You focus your gaze forward. The city rises in layers: domed towers, filament bridges, veins of light crawling up buildings like ivy. From somewhere, beneath all that steel and silence, you feel like someone—something?—watching you.
+(link: "Turn and look east.")[
+(replace: ?viewHook)[
+The perspective shifts right. The rising sun glints off the shattered remains of something ancient—pillars half-sunk into the ground, like ribs of a buried beast. Golden light catches on metal shards strewn like salt.
+(link: "Turn and look south.")[
+(replace: ?viewHook)[
+            You turn around. The desert stretches out in perfect stillness, the trail you carved now almost invisible. Wind brushes over the sand, wiping away the memory of your passage.
+            (link: "Turn and look west.")[
+              (replace: ?viewHook)[
+                You pivot to the left. Your view tightens on a dilapidated structure nestled just outside the city's edge. Antennae bristle from its roof like quills. For a moment, it feels more familiar than the city itself.
+                (link: "Having examined your surroundings, you take a deep breath and step forward to enter the city.")[
+                  (goto: "City2") ]]]]]]]]]</p>
