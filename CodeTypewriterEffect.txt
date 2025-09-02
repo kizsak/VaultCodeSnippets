@@ -1,0 +1,33 @@
+::Typewriter Effect
+::Stylesheet
+.terminal tw-link, .terminal a { color: #00ff00; text-decoration: underline; cursor: pointer; font-size: inherit; }
+.terminal tw-link:visited { color: #888888; text-decoration: line-through; font-style: italic; opacity: 0.6; }
+
+.variable-display { background-color: #4d0039; color: #FF7F50; font-family: 'Space Grotesk', monospace; padding: 1em; }
+
+.pulse { animation: pulse 1.5s infinite; color: #00ff00; }
+.cursor::after { content:'▌'; animation: blink 1s step-start infinite; margin-left:4px; }
+@keyframes pulse { 0%{opacity:1;} 50%{opacity:0.4;} 100%{opacity:1;} }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+@keyframes linkPulse { 0%{text-shadow:0 0 5px #d24dff,0 0 10px #d24dff;} 100%{text-shadow:0 0 10px #d24dff,0 0 20px #d24dff;} }
+
+
+::TypewriterEffect 
+{
+  (set: $typewriterPos to 1)
+  |typewriterOutput>[]
+
+  (live: 20ms)[
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+    (set: $typewriterPos to it + 1)
+    (if: $typewriterPos > $typewriterText's length)[
+      (stop:)
+    ]
+  ]
+}
+
+::Typewriter Passage
+<div class="terminal">
+  (set: $typewriterText to "I'm a tale that unfolds with your choices, where the path you take echoes your voices. With words as your guide, you shape the story, exploring worlds of interactive glory. What am I, this literary quest? A journey where you are the storyteller's guest.")(display: "Typewriter")</span>
+<span class="cursor"></span>
+</div>
