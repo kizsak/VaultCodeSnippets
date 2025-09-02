@@ -1,0 +1,22 @@
+::Randomized Events
+::Randomized Weather Setup
+(set: $hazard to (either: "flash flood", "fire", "unusually cold night", "unusually hot mid-day temperatures"))
+(goto: "Hazard")
+
+
+::Hazard
+(if: $hazard is "flash flood")[
+<img src="https://raw.githubusercontent.com/kizsak/VaultImages/main/DesertFlood.png">
+<p>Without warning, the wind shifts and the sky rips open. Sheets of water batter the hard earth, and within minutes, dry arroyos become raging torrents. The sand under your feet begins to move, carving gullies where there were none. You need higher ground—and fast. You navigate through a sudden flash flood, water rushing relentlessly around you, threatening to sweep you off your feet with its sheer force. The sky roars with thunder, and the air is heavy with the scent of rain and earth. Yet, you press on, determined, each step sinking into the [[muddy ground.|Within View of City]]]</p>
+(elseif: $hazard is "fire")[
+<img src="https://raw.githubusercontent.com/kizsak/VaultImages/main/DesertFire.png">
+<p>A sudden gust carries the scent of scorched earth. Somewhere beyond the ridge, flames race across dry brush and brittle cactus, fed by the wind and the unforgiving sun. The fire moves unpredictably, crackling with heat and panic. You scan for a safe path before you're cut off.Then, a fire blazes ahead of you, the flames crackling and dancing wildly, casting a fierce orange glow against the darkened sky. Smoke billows upward, filling the air with a sharp, acrid smell. Yet, still undeterred, you [[continue forward, resolute and unwavering.|Within View of City]]]</p>
+(elseif: $hazard is "unusually cold night")[
+<img src="https://raw.githubusercontent.com/kizsak/VaultImages/main/DesertSunset2.png">
+<p>As the last light fades, the desert exhales its heat. Cold seeps into your bones, sharper than expected, your breath hanging in the air like desert frost. Even the sand feels brittle beneath you. The stars glitter with icy clarity, indifferent to your discomfort. You tighten your layers, fingers stiff, each movement slower than the last. In the distance, a coyote howls—thin and mournful, like the wind. You wonder if you’ll sleep at all, or [[simply wait for morning to thaw you.|Within View of City]]]</p>
+(else:)[
+<img src="https://raw.githubusercontent.com/kizsak/VaultImages/main/HotDesert.png">
+<p>The sun crests higher than usual, and the heat becomes something else entirely—hostile, smothering, aggressive. The air shimmers with distortion, turning stone into mirage. Every breath tastes scorched, every step kicks up grit too hot to touch. Even the birds have gone silent. Sweat evaporates before it can cool you. You wrap cloth around your face, scan the horizon for shade—but there is none. Just pale rock and open sky, and the [[long, slow burn of time stretching toward dusk.|Within View of City]]]</p>
+
+
+
