@@ -1,0 +1,30 @@
+::If/Else
+(if: $visitedIntegrationI is false and $visitedIntegrationII is false and $visitedIntegrationIII is false)[
+<div class="kate-message">
+Keep reading! There is more to uncover! The Vault of Stories—the organization you are now learning about—will be slowly revealed through documents and dialogue over the course of the story, as you review these epistolary artifacts. You will unlock the path out of the computer terminal by reading each document. Watch for announcements of new documents becoming available to you as you unlock them.
+</div>
+]
+(else-if: $visitedIntegrationI is true and $visitedIntegrationII is false and $visitedIntegrationIII is false)[
+<div class="vd-nest">
+<div class="vd-file">
+<span class="vd-bullet"></span><span class="vd-ico">📄</span>
+[[Memo: System Instabilities and Cognitive Anomalies|Integration Memo II]]
+</div>
+</div>
+<div class="kate-message">Keep reading! There is still more to uncover!</div>
+]
+(else-if: $visitedIntegrationI is true and $visitedIntegrationII is true and $visitedIntegrationIII is false)[
+<div class="vd-nest">
+<div class="vd-file">
+<span class="vd-bullet"></span><span class="vd-ico">📄</span>
+[[Memo: Observed Consequences since Consciousness Integration|Integration Memo III]]
+</div>
+</div>
+]
+(else:)[
+<div class="vd-nest">
+<div class="vd-file">
+<span class="vd-bullet"></span><span class="vd-ico">📄</span>
+[[Memo: Final Findings on the Collapse|SIU Memo]]
+</div>
+</div>
