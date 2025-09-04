@@ -1,0 +1,9 @@
+::Text Change on Hover
+<h2><div style="text-align:center;">
+(set: _normal to "ENTER")
+(set: _hover to "...THAT IS, IF YOU DARE...")
+(link-goto: _normal, "VaultCourtyard")
+(mouseover: ?link)[(replace: ?link)[_hover]]
+(mouseout: ?link)[(replace: ?link)[_normal]]
+</div>
+</h2>
