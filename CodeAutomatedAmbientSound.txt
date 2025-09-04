@@ -1,0 +1,8 @@
+::Ambient Sounds
+<audio id="neon-sfx"
+src="https://raw.githubusercontent.com/kizsak/VaultAudio/main/NeonAmbient.wav"
+       autoplay
+       loop
+       preload="auto"
+       playsinline>
+</audio>
