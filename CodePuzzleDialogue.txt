@@ -1,0 +1,93 @@
+::Puzzle1
+(set: $ListenAria to false)
+(set: $ListenCora to false)
+(set: $ListenLia to false)
+(set: $ListenMilo to false)
+
+<p>You enter the Sublevel Listening Chamber. The walls hum with low, rhythmic whispers — echoes from the last shift of junior archivists. Someone has left playback logs open. You can choose from several voices:
+[[Listen to Aria|ListenAria]]
+[[Listen to Cora|ListenCora]]
+[[Listen to Lia|ListenLia]]
+[[Listen to Milo|ListenMilo]]
+{(if: $heardAria is true and $heardCora is true and $heardLia is true and $heardMilo is true)[
+You've heard enough whispers. Which terminal do you try?
+[[Terminal A|TerminalA]]
+[[Terminal B|TerminalB]]
+[[Terminal C|TerminalC]]]
+(else:)[
+You must listen to all 4 voices before proceeding.
+]}
+
+
+::ListenAria
+(set: $ListenAria to true)
+
+<p>Aria's voice crackles on the recording:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::ListenCora
+(set: $ListenCora to true)
+
+<p>Cora clears her voice before beginning:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::ListenLia
+(set: $ListenLia to true)
+
+<p>Lia's voice springs to life:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::ListenMilo
+(set: $ListenMilo to true)
+
+<p>Milo rasps:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::TerminalA
+<p>You approach Terminal A. A message scrolls on-screen:
+<div class="terminal">
+(set: $typewriterText to "> ACCESS CODE: 1491FLEX-NOVA")
+(display: "Typewriter")
+</div>
+The code is long and definitely not a palindrome. Try another terminal:
+[[Terminal B|TerminalB]]
+[[Terminal C|TerminalC]]
+
+
+::TerminalB
+<p>The screen on Terminal C flickers. You see garbled symbols and then static.</p>
+<div class="terminal">
+(set: $typewriterText to "> [ERROR 4568 :: DATA STREAM INTERRUPTED]")
+(display: "Typewriter")
+</div>
+<p>No luck. [[Try Terminal C|TerminalC]]</p>
+
+
+::TerminalC
+<p>The screen glows softly:</p>
+<div class="terminal">
+(set: $typewriterText to "> ACCESS CODE: DEIFIED")
+(display: "Typewriter")
+</div>
+<p><p>You blink. The word is the same forward and backward. You hit [["enter".|TerminalC.1]]</p>
+
+
+::TerminalC.1
+<div class="terminal">
+(set: $typewriterText to "> SYSTEM: Valid palindrome confirmed. Access granted.")
+(display: "Typewriter")
+<p> **Success.** You lean in as a hidden directory opens beneath the main interface.
+
+[[Continue deeper into the archive|NOACCESS]]
