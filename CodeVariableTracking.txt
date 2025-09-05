@@ -1,0 +1,58 @@
+::Variable Tracking
+
+::STARTUP
+(set: $precision to false)
+(set: $chaos to false)
+(set: $charm to false)
+(set: $visited to 0)
+
+
+::HubVariable
+<p>You stand at the heart of the Carnival of Impossible Professions. Around you, tents shimmer with unlikely signage. Where will you begin?</p>
+(if: $precision is false)[
+[[Enter the Tent of Tiny Tasks|TinyTent]]
+]
+(if: $chaos is false)[
+[[Step into the Tent of Unplanned Performances|PerformanceTent]]
+]
+(if: $charm is false)[
+[[Visit the Tent of Ridiculous Persuasion|RidiculousTent]]
+]
+(if: $visited is 3)[
+[[Approach the Job Offer Pavilion|JobOffer]]
+]
+
+
+::TinyTent
+(set: $precision to true)
+(set: $visited to $visited + 1)
+
+<p>You are handed a thimble, three marbles, and a live beetle. A voice whispers:  //Stack them. Alphabetically.//
+<br>
+You succeed. Somehow.</p>
+
+[[Return to the Midway|HubVariable]]
+
+
+::RidiculousTent
+(set: $charm to true)
+(set: $visited to $visited + 1)
+
+<p>You must convince a velvet-robed llama to give you a spoon. You succeed by complimenting its hooves and reciting love poetry in iambic pentameter.</p>
+
+[[Return to the Midway|HubVariable]]
+
+
+::PerformanceTent
+(set: $chaos to true)
+(set: $visited to $visited + 1)
+
+<p>You are thrown onto a stage lit by candles and rotating disco mushrooms.  A curtain lifts. A parrot heckles. You improvise a monologue about forks and regret. Applause erupts.</p>
+
+[[Return to the Midway|HubVariable]]
+
+
+::JobOffer
+<p>You are summoned beneath the striped Job Pavilion. A panel of monocled toads evaluates your trials. One says, //Your trials are... inconclusive. Please return next carnival cycle for reevaluation.//
+
+[[Leave the Pavilion|NOACCESS]]</p>
