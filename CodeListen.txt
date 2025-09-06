@@ -1,0 +1,96 @@
+::IfElse
+::VarInits
+(set: $heardElena to false)
+(set: $heardSofia to false)
+(set: $heardLukas to false)
+(set: $heardOmar to false)
+
+
+::Puzzle1
+<p>You enter the Sublevel Listening Chamber. The walls hum with low, rhythmic whispers — echoes from the last shift of junior archivists. Someone has left playback logs open. You can choose from several voices:
+[[Listen to Elena|ListenElena]]
+[[Listen to Sofia|ListenSofia]]
+[[Listen to Lukas|ListenLukas]]
+[[Listen to Omar|ListenOmar]]
+
+(if: $heardElena is true and $heardSofia is true and $heardLukas is true and $heardOmar is true)[
+You have heard enough whispers. Which terminal do you try?
+[[Terminal A|TerminalA]]
+[[Terminal B|TerminalB]]
+[[Terminal C|TerminalC]]]
+(else:)[
+You must listen to all 4 voices before proceeding.
+]
+
+
+::ListenLukas
+(set: $HeardLukas to true)
+
+<p>Lukas's voice springs to life:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::ListenOmar
+(set: $HeardOmar to true)
+
+<p>Omar rasps:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::ListenElena
+(set: $heardElena to true)
+
+<p>Elena's voice crackles on the recording:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::ListenSofia
+(set: $heardSofia to true)
+
+<p>Sofia clears her voice before beginning:
+//If you knew the codes, you wouldn’t be asking. But fine. All I know is the real access key doesn’t include numbers. Someone told me it used a palindrome.//
+
+[[Return to the voice recording menu|Puzzle1]]
+
+
+::TerminalA
+<p>You approach Terminal A. A message scrolls on-screen:
+<div class="terminal">
+(set: $typewriterText to "> ACCESS CODE: 1491FLEX-NOVA")
+(display: "Typewriter")
+</div>
+The code is long and definitely not a palindrome. Try another terminal:
+[[Terminal B|TerminalB]]
+[[Terminal C|TerminalC]]
+
+
+::TerminalB
+<p>The screen on Terminal B flickers. You see garbled symbols and then static.</p>
+<div class="terminal">
+(set: $typewriterText to "> [ERROR 4568 :: DATA STREAM INTERRUPTED]")
+(display: "Typewriter")
+</div>
+<p>No luck. [[Try Terminal C|TerminalC]]</p>
+
+
+::TerminalC
+<p>The screen glows softly:</p>
+<div class="terminal">
+(set: $typewriterText to "> ACCESS CODE: DEIFIED")
+(display: "Typewriter")
+</div>
+<p><p>You blink. The word is the same forward and backward. You hit [["enter".|TerminalC.1]]</p>
+
+
+::TerminalC.1
+<div class="terminal">
+(set: $typewriterText to "> SYSTEM: Valid palindrome confirmed. Access granted.")
+(display: "Typewriter")
+<p> **Success.** You lean in as a hidden directory opens beneath the main interface.
+</div>
