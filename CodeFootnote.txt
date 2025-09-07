@@ -1,0 +1,106 @@
+::ArchivalNotes
+<p>You are a researcher exploring a fragmented digital journal from an ill-fated expedition to an ancient site known as Site Thalos. As you explore the journal, you can access embedded archive passages (highlighted or footnoted) that reveal deeper information: personal notes, scientific footnotes, or corrupted logs. 
+
+[[Continue|Journal1]]
+
+
+::Journal1
+The heat at Site Thalos was unrelenting. Even in the shadows of the obelisks, (link: "sweat pooled beneath the harness straps")[(display: "Archive1")]. Dr. Valencia remained convinced we were close to uncovering the central vault — a theory based on a (link: "fragmented map found beneath Layer Delta")[(display: "MapNote1")].
+(click: "Footnote 1")[
+	(show: ?footnote1)
+]
+|footnote1)[(enchant: ?footnote1, (text-style: "italic"))[Some claim Thalos predates the Saharan dynasties by centuries.]]
+[[Proceed to the next entry.|Journal2]]
+
+
+::Journal2
+<p>A faint tremor woke us around 03:14. At first, we thought it was wind shifting the dunes again. But then came the humming.  
+(click: "Footnote 2")[
+	(show: ?footnote2)
+]
+|footnote2)[(enchant: ?footnote2, (text-style: "italic"))[Valencia believes the humming is a resonance triggered by our excavation — she’s logging every instance.]]
+
+(link: "Open Valencia’s Log")[(display: "ValenciaLog")]
+
+[[Continue|Journal3]]
+
+
+::Journal3
+<p>We descended into the lower gallery this morning. The walls bore carvings unseen in any previous survey — glyphs spiraling inward like some kind of [[gravitational diagram|GlyphNote]].  
+
+The temperature dropped sharply. Valencia remarked it was (link: "unnaturally cold")[(display: "ColdNote")], like something was drawing heat out of the air.
+
+(click: "Footnote 3")[
+	(show: ?footnote3)
+]
+
+|footnote3)[(enchant: ?footnote3, (text-style: "italic"))[The glyphs were later found to contain fragments of early numeric sequences — perhaps proto-algorithms.]]
+
+[[Proceed to the next entry->Journal4]]
+
+
+::Journal4
+<p>Valencia insisted on pressing further in. I stayed behind to catalog our readings. That’s when I noticed a hum — not audible, but (link: "inside the bones")[(display: "BoneNote")].  
+
+I reached out to touch the carved wall, and it felt like it was breathing.
+
+(click: "Footnote 4")[
+	(show: ?footnote4)
+]
+
+|footnote4)[(enchant: ?footnote4, (text-style: "italic"))[This moment marks the first recorded sensory hallucination among team members — though no one admitted it at the time.]]
+
+[[Continue|Journal5]]
+
+
+::Journal5
+<p>Dr. Valencia hasn’t returned. The radio is silent, but I found her notebook. The final page is just one word, written over and over:  
+
+**//remember//**
+
+[[Return to start|Journal1]]
+
+
+::ValenciaLog
+<p>🧪**Dr. Valencia’s Log - Entry 88**  
+//Third hum event recorded. Timestamp: 03:14. All sensors aligned. Vibration synchronized with a spike in geothermal readings. This is no coincidence.'//
+
+[[Back->Journal2]]
+
+
+::BoneNote
+<p>📎 **Sensory Log #21**  
+Subdermal vibration detected. Origin point traced to central chamber wall. Subject’s heart rate increased by 18 bpm. No external vibration detected.
+
+[[Back|Journal4]]</p>
+
+
+::Archive1
+<p>📎 **Archival Note**:  
+Field Log 33A — July 10  
+//Daylight temperatures reached 47°C. Gear is deteriorating rapidly. We’ve requested additional UV barriers from Basecamp Thalos-2.'//
+
+[[Back->Journal1]]
+
+
+::MapNote1
+<p>📎 ''Footnote: Layer Delta Findings''  
+The map, inked on animal hide and partially carbonized, suggests a concentric chamber structure — a feature consistent with early containment architecture in Thalosian ruins.
+
+[[Back->Journal1]]</p>
+
+
+::ColdNote
+<p>📎 **Observation Log: Environmental Anomalies**  
+//Temperature fell 12°C within five meters. Instruments failed to detect a physical source. This anomaly coincided with faint magnetic interference.//
+
+[[Back|Journal3]]
+
+
+::GlyphNote
+<p>📎 ''Field Sketches — Lower Gallery''  
+Circular inscriptions traced into obsidian. The pattern appears mathematical — Fibonacci spirals or analogues.
+
+[[Back->Journal3]]</p>
+
+

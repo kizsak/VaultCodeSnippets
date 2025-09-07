@@ -1,0 +1,123 @@
+::AffinityTracking
+(set: $affinityAlex to 0)
+(set: $affinityMorgan to 0)
+(set: $metAlex to false)
+(set: $metMorgan to false)
+
+<p>You arrive at the old garden just as the sun dips below the stone walls. Two figures stand nearby: Alex, pruning roses with quiet focus, and Morgan, seated beneath a tree sketching in a tattered notebook.
+
+[[Approach Alex.|MeetAlex]]
+[[Approach Morgan.|MeetMorgan]]</p>
+
+
+::MeetAlex
+(set: $metAlex to true)
+<p>Alex glances up. “You’re just in time. The moonflowers bloom at dusk.”
+
+[[Compliment the roses.|AlexCompliment]]
+[[Ask about the moonflowers.|AlexMoonflowers]]</p>
+
+
+::GardenAgain
+(if: $metAlex is true and $metMorgan is true)[
+<p>You stand again at the crossroads of green shadows. The roses rustle softly, and pencil scratches echo faintly from the tree. You have spoken with both Alex and Morgan — and the choice, now, is yours.</p>
+]
+(else-if: $metAlex is true and $metMorgan is false)[
+<p>You linger near the trimmed rosebeds. Alex’s shears are silent, waiting. The tree beyond still hides the figure you haven’t yet met.</p>
+]
+(else-if: $metAlex is false and $metMorgan is true)[
+<p>Morgan watches you from the shade. You sense curiosity there — and somewhere among the roses, someone else waits.</p>
+]
+(else-if: $metAlex is false and $metMorgan is false)[
+<p>You're alone in the garden, paths unworn. Two presences wait unseen: one among the roses, the other beneath a tree’s canopy. Which will you choose?</p>
+]
+<p>[[Find Alex again.|MeetAlex]]
+[[Return to Morgan.|MeetMorgan]]
+[[Decide who to walk home with.|FinalChoice]]</p>
+
+
+::MeetMorgan
+(set: $metMorgan to true)
+<p>Morgan doesn’t look up. “Are you here to study the trees or avoid someone?”
+
+[["Avoid someone."|MorganCurious]]
+[["Study the trees."|MorganTrees]]</p>
+
+
+::AlexCompliment
+(set: $affinityAlex to $affinityAlex + 1)
+<p>Alex’s smile is faint, but genuine. “They respond well to care. Like most things.”
+
+[[Stay and help trim.|AlexHelp]]
+[[Excuse yourself.|GardenAgain]]</p>
+
+
+::AlexMoonflowers
+(set: $affinityAlex to $affinityAlex + 1)
+<p>“The moonflowers only open when it’s quiet. They dislike drama.” Alex side-eyes the direction of Morgan’s tree.
+
+[[Ask what else they dislike.|AlexSubtleTension]]
+[[Thank Alex and move on.|GardenAgain]]</p>
+
+
+::AlexSubtleTension
+(set: $affinityAlex to $affinityAlex - 1)
+<p>“They dislike sketchy people,” Alex mutters.
+
+[[Laugh awkwardly and wander away.|GardenAgain]]
+[[Defend Morgan.|AlexCoolOff]]<p>
+
+
+::AlexCoolOff
+(set: $affinityAlex to $affinityAlex - 1)
+<p>Alex’s lips thin. “Maybe you should go talk to them, then.”
+
+[[Return to the tree to find Morgan.|MeetMorgan]]
+
+
+::AlexHelp
+(set: $affinityAlex to $affinityAlex + 1)
+<p>You work in silence. Alex eventually says, “It’s rare someone chooses quiet.”
+
+[[Back to garden path.|GardenAgain]]</p>
+
+
+::MorganSit
+(set: $affinityMorgan to $affinityMorgan + 1)
+<p>You sit together, not speaking. Morgan’s pencil moves. “I draw what people don’t say.”
+
+[[Back to garden path.|GardenAgain]]</p>
+
+
+::MorganTrees
+(set: $affinityMorgan to $affinityMorgan + 1)
+<p>Morgan finally looks at you. “You see the shapes in the branches too, don’t you?”
+
+[[Agree, even if unsure.|MorganSit]]
+[[Shake your head.|GardenAgain]]</p>
+
+
+::MorganCurious
+(set: $affinityMorgan to $affinityMorgan + 1)
+<p>Morgan smirks. “Smart. These garden types can be intense.”
+
+[[Sit beside them.|MorganSit]]
+[[Say you need to think.|GardenAgain]]
+
+
+::FinalChoice
+(if: $affinityAlex > $affinityMorgan)[
+<p>You find Alex waiting, shears tucked away. “Walking back alone is inefficient,” Alex says, offering a hand.
+
+**ENDING: Shared Silence**
+]
+(else-if: $affinityMorgan > $affinityAlex)[
+Morgan’s sketchbook closes. “I guessed you'd pick me.” They grin, eyes unreadable.
+
+**ENDING: Wordless Pages**
+]
+(else:)[
+You hesitate. Neither waits. The moonflowers open behind you.
+
+**ENDING: Alone in Bloom**
+]</p>

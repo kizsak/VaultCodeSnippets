@@ -1,0 +1,86 @@
+::HealthLoop
+(set: $energy to 5)
+(set: $hydration to 5)
+(set: $mood to 5)
+
+<p>You're a med student trying to stay functional through a long day. Each choice you make affects your health stats.</p>
+
+[[You begin your day.|Loop]]
+
+
+::Loop
+<p>Your current stats:
+- Energy: $energy
+- Hydration: $hydration
+- Mood: $mood
+
+What would you like to do?
+
+* [[Grab coffee (+1 Energy, -1 Hydration)|Coffee]]
+* [[Take a walk outside (+1 Mood, -1 Energy)|Walk]]
+* [[Drink water (+2 Hydration)|Water]]
+* [[Scroll social media (-1 Mood, -1 Energy)|Scroll]]
+* [[Eat a snack (+1 Energy, +1 Mood)|Snack]]
+* [[End the Day|End]]
+
+
+::Coffee
+(set: $energy to $energy + 1)
+(set: $hydration to $hydration - 1)
+
+<p>The caffeine helps—briefly. But you forgot to drink water.</p>
+
+[[Try some other things that may affect your health.|Loop]]
+
+
+::Walk
+(set: $mood to $mood + 1)
+(set: $energy to $energy - 1)
+
+<p>You take a short walk and feel the tension ease, but now you're a little more tired.</p>
+
+[[Try something else to affect your health.|Loop]]
+
+
+::Water
+(set: $hydration to $hydration + 2)
+
+<p>A good gulp of water. Simple, effective.</p>
+
+[[See how something else affects your health.|Loop]]
+
+
+::Scroll
+(set: $mood to $mood - 1)
+(set: $energy to $energy - 1)
+
+<p>You lose twenty minutes and gain nothing. Oops.</p>
+
+[[See if there is something else you can do to improve your health.|Loop]]
+
+
+::Snack
+(set: $energy to $energy + 1)
+(set: $mood to $mood + 1)
+
+<p>You eat a quick snack. You feel a bit better.</p>
+
+[[You look for other things to improve your wellbeing.|Loop]]
+
+
+::End
+<p>Your day is over. Here's how you're doing: Your energy is $energy, your hydration is $hydration, and your mood is $mood.</p>
+
+(if: $energy > 5)[You're still feeling strong.]
+(else-if: $energy > 3 and $energy < 6)[You're a bit worn down, but okay.]
+(else:)[You're running on fumes.]
+
+(if: $hydration > 5)[You stayed well hydrated!]
+(else-if: $hydration > 3 and $hydration < 6)[You could use a drink.]
+(else:)[You're dehydrated and foggy.]
+
+(if: $mood > 5)[You're in high spirits.]
+(else-if: $mood > 3 and $mood < 6)[You're neutral, maybe a little low.]
+(else:)[You feel like everything went wrong today.]
+
+[[Let's see what tomorrow brings!|Loop]]

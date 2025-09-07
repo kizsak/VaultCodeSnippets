@@ -1,0 +1,114 @@
+::WorldState
+(set: $alignment to "")
+(set: $usesTech to false)
+(set: $disruptsSystem to false)
+(set: $memoryRestored to false)
+(set: $worldState to "unstable")
+
+<p>In a future where personal memory is state-regulated, you wake to a blinking console. You don’t remember what you’ve lost. Or why the alarm is going off.
+
+[[Read the console.|ConsoleRead]]
+[[Ignore it and look outside.|ObservationDeck]]</p>
+
+
+::ObservationDeck
+<p>The city floats in concentric rings above shattered earth. A drone blinks red, scanning.
+
+(if: $alignment is "")[
+The drone pauses, confused.
+[[Do nothing.|ScanOutcome]]
+[[Try to smile.|ScanOutcome]]
+]
+(else:)[
+The drone reads your state signature.
+[[Wait for it to pass.|ScanOutcome]]
+[[Salute ironically.|ScanOutcome]]
+]</p>
+
+
+::ConsoleRead
+<p>The console pulses: “IDENTITY UNSTABLE. CHOOSE ALIGNMENT:”
+
+[[Comply.|Aligned]]
+[[Resist.|Resistant]]</p>
+
+
+::ScanOutcome
+<p>(if: $alignment is "resistant")[
+The drone marks you as uncertain. It does not fire.
+(set: $worldState to "hostile")
+]
+(elseif: $alignment is "aligned")[
+The drone flickers blue. Logged.
+(set: $worldState to "monitored")
+]
+(else:)[
+It hesitates. You remain unclassified.
+(set: $worldState to "undefined")
+]
+
+[[Return to console.|ConsoleRead]]
+[[Find the memory core.|MemoryVault]]</p>
+
+
+::MemoryVault
+<p>A column of crystal pulses at the chamber’s center. Your records lie within. But one layer is sealed.
+
+(if: $disruptsSystem)[
+You have root access. The seal begins to lift.
+(set: $memoryRestored to true)
+(set: $worldState to "corrupted")
+]
+(else:)[
+You touch the crystal. It burns.
+]
+
+[[Access the final memory.|Choice]]</p>
+
+
+::Aligned
+(set: $alignment to "aligned")
+(set: $worldState to "stable")
+<p>The screen flickers. A memory injection is queued. You feel your previous loyalties assert themselves.
+
+[[Initiate the sequence.|NeuroLink]]</p>
+
+
+::Neurolink
+<p>(set: $usesTech to true)
+A neural halo encircles your head. Lights spiral inward. Data pulses through your skull.
+
+(if: $alignment is "aligned")[
+You remember receiving orders. The city praised you. The core was safe.
+(set: $worldState to "enforced")
+]
+(elseif: $alignment is "resistant")[
+You remember another self. Hidden archives. A child’s drawing. A lie at the center of power.
+(set: $worldState to "disrupted")
+]
+
+[[Seek the vault to confirm your memory.|MemoryVault]]</p>
+
+
+::Choice
+<p>(if: $memoryRestored)[
+A child once handed you the blueprint for this world — and you signed it away. The system was built on that betrayal. **ENDING: Architect of Oblivion**
+]
+(else-if: $usesTech and $worldState is "enforced")[
+The machine shows you what it wants you to see. Your tears aren’t yours. **ENDING: Manufactured Sorrow**
+]
+(else-if: $worldState is "hostile")[
+You never make it to the vault. Resistance came at a price. **ENDING: Redlisted**
+]
+(else:)[
+You never find out who you were. But maybe that’s freedom. **ENDING: Blank Consent**
+]</p>
+
+
+::Resistant
+(set: $alignment to "resistant")
+(set: $disruptsSystem to true)
+(set: $worldState to "fractured")
+<p>You pull the console's backup cable instead. Sparks fly.
+
+[[Use the open panel to override system.|NeuroLink]]</p>

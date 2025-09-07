@@ -1,0 +1,99 @@
+::FakeChoices
+<p>**Welcome to LifeChoice™ 2077**
+
+You may begin your narrative journey.
+
+[[Begin heroic quest.|ErrorOne]]
+[[Begin tragic backstory.|ErrorOne]]
+[[Become a humble turnip farmer.|ErrorOne]]</p>
+
+
+::ErrorOne
+<p>**404: Narrative not found.**
+
+[[Reboot.|UnexpectedReboot]]
+[[Try again with enthusiasm.|ErrorOne]]
+[[Whisper sweetly to the code|RomanticLoop]]</p>
+
+
+::UnexpectedReboot
+<p>**Rebooting... Rebooting... still rebooting...**
+
+(set: $reboot to (either: true, false))
+(if: $reboot is true)[
+**System update complete. Patch notes: Removed character agency. Added ambient confusion.**
+[[Accept terms and conditions|TermsLoop]]
+]
+(else:)[
+''Reboot failed. You are now a goose.''
+[[HONK|GooseEnd]]
+]</p>
+
+
+::RomanticLoop
+(set: $attempts to (either: 1, 2, 3))
+<p>
+(if: $attempts is 1)[
+**The code flutters. It’s flattered, but hesitant.**
+[[Whisper again.|RomanticLoop]]
+]
+(else-if: $attempts is 2)[
+**The code blinks shyly. Did it just... compile a blush?**
+[[Lean in closer.|RomanticLoop]]
+]
+(else:)[
+**The code crashes from emotional overload.**
+[[Hard reboot|FakeChoices]]
+]</p>
+
+
+::TermsLoop
+<p>**You have agreed to everything. And nothing.'**
+
+[[Try to scroll down.|NoScroll]]
+[[Lie and say you read them.|MetaPunishment]]</p>
+
+
+::NoScroll
+<p>There is no scroll. There never was.
+
+[[Pretend you scrolled anyway.|MetaPunishment]]</p>
+
+
+::MetaPunishment
+<p>The narrator sighs audibly. “Wow. Skipping the terms? Classic.”
+
+**As punishment, you must now roleplay a 1990s screensaver.**
+
+[[Bounce diagonally forever|ScreensaverLoop]]</p>
+
+
+::ScreensaverLoop
+<p>//(bounces...)
+
+(bounces again...)
+
+(bounces slightly faster...)//
+
+[[Refuse to bounce.|FakeChoice1]]
+[[Bounce with pride.|FakeChoice2]]
+
+
+::FakeChoice1
+<p>**You rebel. The screen rebels back.**
+
+[[Try again|FakeChoices]]</p>
+
+
+::FakeChoice2
+<p>**Your loyalty has been logged. And sold.**
+
+[[Return to narrative (maybe).|ErrorOne]]</p>
+
+
+::GooseEnd
+<p>You honk defiantly. The simulation panics. Guards chase you with baguettes. You flap. You fly. You ascend beyond genre.
+
+**HONK. THE END.**</p>
+
+[[Try again.|FakeChoices]]

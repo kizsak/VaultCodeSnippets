@@ -1,0 +1,111 @@
+::ProgressiveConsequenceTree
+(set: $hasTorch to false)
+(set: $legInjured to false)
+(set: $artifactFound to false)
+(set: $beastAwake to false)
+(set: $pathTaken to "")
+
+<p>A storm splits the mountain above. You and your team descend into the rift, seeking the relic lost beneath centuries of ash. But when the rope snaps, you fall alone.
+
+[[Check your gear.|GearCheck]]
+[[Call out for help.|Echoes]]
+
+
+::GearCheck
+<p>You pat your belt. Most of your tools are gone — except a lighter and some soaked rations. You find an old torch near a stone outcrop.
+
+[[Light the torch.|TorchLit]]
+[[Leave it and keep going.|RiftFork]]</p>
+
+
+::TorchLit
+(set: $hasTorch to true)
+<p>You light the torch. Shadows recoil. You move forward, warmth flickering across walls marked with strange symbols.
+
+[[Continue into the rift.|RiftFork]]</p>
+
+
+::RiftFork
+<p>You reach a fork: one tunnel glows faintly green, the other drops into a tight vertical shaft.
+
+[[Take the glowing path.|GlowingPath]]
+[[Climb into the shaft.|VerticalShaft]]</p>
+
+
+::VerticalShaft
+(set: $pathTaken to "shaft")
+<p>You lower yourself down. It’s slick. Near the bottom, you slip.
+
+(if: $hasTorch is false)[
+(set: $legInjured to true)
+You fall hard. Your leg twists painfully.
+]
+
+[[Stumble on.|ChamberEntrance]]</p>
+
+
+::GlowingPath
+(set: $pathTaken to "glow")
+(set: $artifactFound to true)
+<p>The glow comes from bioluminescent moss — and a shape beneath it. A fossilized pack. Inside: dried notes, and a ceramic artifact.
+
+[[Continue forward.|ChamberEntrance]]</p>
+
+
+::ChamberEntrance
+<p>The tunnel opens into a vault. Vines dangle from the ceiling. You hear rhythmic breathing. Something huge slumbers here.
+
+(if: $artifactFound)[You grip the ceramic artifact — it hums slightly.]
+(if: $legInjured)[Your limp slows you. Every sound feels louder.]
+(if: $hasTorch)[The torchlight flickers over the stone, casting a brief gleam across scales.]
+
+[[Sneak around the chamber.|Sneak]]
+[[Approach the sleeping beast.|Beast]]
+[[Retreat quietly.|ExitTunnel]]</p>
+
+
+::Beast
+(set: $beastAwake to true)
+<p>The beast's eye opens. It rises. A hundred tons of ancient fury. It sees you.
+
+(if: $artifactFound)[The artifact pulses. You raise it instinctively. The beast halts.]
+(else:)[It lunges.]
+
+[[Try to run.|ExitTunnel]]
+[[Stand your ground.|Altar]]</p>
+
+
+::Altar
+(if: $artifactFound)[
+<p>You place the artifact in a hollow socket. The beast stops. A deep tone resonates through the chamber.
+
+**ENDING: Guardian’s Accord**
+]
+(else:)[
+You reach the altar, but there's nothing to offer. The beast does not hesitate.
+
+**ENDING: Crushed Beneath Stone**
+]</p>
+
+
+::Sneak
+(if: $legInjured)[
+(set: $beastAwake to true)
+<p>Your foot catches on a vine. The beast stirs.
+]
+(else:)[You step quietly, hugging the wall.]
+
+[[Reach the altar.|Altar]]
+
+
+::ExitTunnel
+(if: $beastAwake)[
+<p>You flee. The tunnel collapses behind you. You survive, barely, but the relic is lost.
+
+''ENDING: Ashes and Echoes''
+]
+(else:)[
+You escape undetected. No treasure, but your story will carry weight.
+
+''ENDING: The Silent Rift''
+]</p>

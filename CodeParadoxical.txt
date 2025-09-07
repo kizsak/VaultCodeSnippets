@@ -1,0 +1,99 @@
+::Wake
+(set: $tries to 0)
+(set: $mirrorBroken to false)
+(set: $voiceHeard to false)
+
+<p>You wake up in a white chamber with no memory of how you got here. The light hums. The air feels heavy with meaning.
+
+[[Look around|Room]]</p>
+
+
+::Room
+<p>You see a mirror that doesn’t reflect properly, and a door with no handle. Your breath fogs neither.
+
+[[Inspect the door|InspectDoor]]
+[[Look into the mirror|InspectMirror]]
+[[Say something aloud|SpeakAloud]]</p>
+
+
+::InspectDoor
+<p>You push on the door. It doesn’t budge. But as you step away, you hear a soft click behind you.
+
+[[Turn around|Room]]</p>
+
+
+::InspectMirror
+<p>The mirror reflects the room but not you. Instead, it shows you looking at yourself, but slightly delayed.
+
+[[Touch the mirror|LoopedChoice1]]
+[[Smash the mirror|BreakMirror]]
+[[Back away|Room]]</p>
+
+
+::SpeakAloud
+(set: $voiceHeard to true)
+<p>You say your name. The mirror says something different back.
+“That’s not who you are now,” it whispers.</p>
+
+[[Keep talking->LoopedChoice2]]
+[[Back away->Room]]</p>
+
+
+::LoopedChoice1
+(set: $tries to $tries + 1)
+<p>When you touch the mirror, you appear inside it. A reflection of yourself now looks out at you and makes the same gesture — but opposite.
+
+(if: $tries is 1)[It’s unsettling.]
+(else-if: $tries is 2)[Your reflection now smiles. You didn’t.]
+(else-if: $tries is 3)[It doesn’t move anymore. You’ve lost control of it.]
+(else:)[The reflection reaches out — and pulls you in.]
+
+(if: $tries < 4)[
+[[Touch it again|LoopedChoice1]]
+[[Try something else|Room]]
+]
+(else:)[
+[[Fall forward|Escape]]
+]</p>
+
+
+::LoopedChoice2
+<p>You talk about yourself. The voice begins interrupting. “That’s not true,” it says. “You remember more than you admit.”
+
+[[Deny it|LoopedChoice2]]
+[[Agree|LoopedChoice3]]</p>
+
+
+::LoopedChoice3
+<p>“That’s not true,” the voice says again. “Then why are you still here?”
+
+(if: $voiceHeard is true)[
+You remember the mirror. The way it smiled when you didn’t.
+[[Say: ‘I surrender.’|Surrender]]
+]
+[[Say: ‘I want to leave.’|LoopedChoice3]]</p>
+
+
+::BreakMirror
+(if: $mirrorBroken is false)[
+<p>You throw a chair through the mirror. It shatters. Behind it: nothing. A wall. But now your reflection appears everywhere else — on the floor, the door, the ceiling.
+(set: $mirrorBroken to true)
+[[Back|Room]]
+]
+(else:)[
+The mirror is already broken. Your reflection no longer changes. It just stares.
+[[Back|Room]]
+]</p>
+
+
+::Surrender
+<p>The chamber dims. The door opens. You never hear the voice again.</p>
+
+[[Step through.|Escape]]
+
+
+::Escape
+<p>You are outside. The world is wrong — but it’s yours again. The paradox is broken.
+
+''THE END''</p>
+
