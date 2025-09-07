@@ -1,0 +1,112 @@
+::CluesLockedPassages
+(set: $cluePhoto to false)
+(set: $clueLetter to false)
+(set: $clueServants to false)
+(set: $clueFingerprints to false)
+(set: $clueMedallion to false)
+(set: $clueClock to false)
+
+<p>You are cataloguing the contents of the decaying library at Ashwood Estate. You find a hidden ledger containing encrypted confessions of a long-forgotten crime. You cannot yet piece together what the crime was, but it is clear that there is more information in a locked archive. You decide to search the estate for other clues. [[You start in the entrance hall.|EntranceHall]]</p>
+
+
+::EntranceHall
+<p>Dust swirls in the sunlight slicing through cracked windows. The house is waiting.</p>
+
+[[Try the locked door.|SealedArchive]]
+[[Explore the drawing room.|DrawingRoom]]
+[[Search the library.|Library]]
+[[Visit the clocktower.|Clocktower]]
+[[Visit the study.|Study]]
+[[Snoop around the conservatory.|Conservatory]]
+[[Check your inventory for clues you have collected.|ClueInventory]]
+
+
+::DrawingRoom
+(set: $cluePhoto to true)
+
+<p>The scent of ash clings to the velvet drapes of the Drawing Room. On the mantle lies a photo, edges burned, but a single phrase scrawled on the back catches your eye: *"Forgive the fire. She only wanted truth."*
+
+Take the photo and return to the [[Entrance Hall.|EntranceHall]]</p>
+
+
+::ServantsQuarters
+(set: $clueServants to true)
+
+<p>You step over shattered crockery. In the shadows, something speaks—not a voice, but a memory. "You shouldn't have opened the archive," someone whispers from a bed that hasn't been slept in for decades.</p>
+
+[[Return to the entrance hall.|EntranceHall]]
+
+
+::Clocktower
+(set: $clueClock to true)
+
+<p>You climb the rickety stairs to the broken clocktower. Nestled behind the gears is a brittle **page torn from a journal**, dated the night of the fire. It ends mid-sentence: *"He knows about the cellar..."*</p>
+
+[[Return to the entrance hall.|EntranceHall]]
+
+
+::Conservatory
+(set: $clueMedallion to true)
+
+<p>A cracked glass case stands among the overgrowth. Inside, you find a small silver **medallion**, tarnished but unmistakably engraved with the Ashwood crest.</p>
+
+[[Return to entrance hall.|EntranceHall]]
+
+
+::ArchiveInterior
+The archive hums with secrets. On the desk, the ledger awaits—its final page still damp with ink.
+
+**You have uncovered the truth. But will you share it?**
+
+[[Restart the story.|CluesLockedPassages]]
+
+
+::SealedArchive
+(if: $cluePhoto is true and $clueLetter is true and $clueServants is true and $clueFingerprints is true and $clueMedallion is true and $clueClock is true)[
+<p>The lock clicks, slow and reluctant. You are inside.</p>
+[[Enter the archive->ArchiveInterior]]
+]
+
+<p>(else:)[
+The door remains shut. Three hollow indents on the lock suggest something might be missing.</p>
+[[Return to Entrance Hall->EntranceHall]]
+]
+</p>
+
+
+::Study
+(set: $clueFingerprints to true)
+<p>The desk is layered in dust, but a drawer has been recently disturbed. Inside: a black inkwell—and a half-smudged **fingerprint** on its rim.</p>
+
+[[Return to entrance hall.|EntranceHall]]
+
+
+::ClueInventory
+<p>You open your notes and examine what you've collected so far.
+
+(if: $cluePhoto is true)[• Burned Photograph – A cryptic apology scrawled on the back.]
+(if: $clueLetter is true)[• Sealed Letter – Marked with Ashwood’s crest, addressed to A.R.]
+(if: $clueServants is true)[• Whispered Memory – Someone heard shouting the night the fire started.]
+(if: $clueFingerprints is true)[• Fingerprint – Found on the inkwell in the study.]
+(if: $clueMedallion is true)[• Medallion – Silver, bearing the Ashwood crest.]
+(if: $clueClock is true)[• Journal Page – Torn and dated the night of the fire. Mentions the cellar.]
+
+[[Return to Entrance Hall|EntranceHall]]
+
+
+::Library
+(if: $cluePhoto is true)[
+<p>A chill runs up your spine as the bookshelf shifts. A small drawer clicks open beneath the fireplace.</p>
+[[Open the drawer.|Secret Drawer]]
+]
+(else:)[
+<p>You trace your fingers along the bookshelf. Something’s off—but you don’t know what yet.</p>
+[[Return to entrance hall.|EntranceHall]]
+]
+
+
+::Secret Drawer
+(set: $clueLetter to true)
+<p>Inside is a wax-sealed letter addressed to someone named *A.R.* The seal bears the crest of Ashwood—split down the center.
+
+Take the letter and [[return to the entrance hall.|EntranceHall]]</p>
