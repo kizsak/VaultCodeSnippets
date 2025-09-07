@@ -1,0 +1,52 @@
+::LoopingPassages
+(set: $orientationCount to 0)
+(set: $brokenLoop to false)
+
+<p>You enter a dark room that smells herbaceous in some way you cannot identify.<p>
+
+[[Enter through the half-open doorway.|OrientationRoom]]
+
+
+::OrientationRoom
+(set: $orientationCount to $orientationCount + 1)
+
+<p>You are in the Room of Perpetual Orientation. The scent of lavender is strong.</p>
+
+(if: $orientationCount is 1)[
+A soft voice coos: "Welcome, initiate. We will help you feel properly oriented."
+]
+(else-if: $orientationCount is 2)[
+The voice intones: "Orientation must be reinforced."
+]
+(else-if: $orientationCount is 3)[
+You notice the room is now slightly upside-down.
+
+[[Ask the Room a Question|AskQuestion]]
+]
+(else:)[
+The voice says: "Begin to consider that orientation may be... recursive."
+
+[[Ask the Room a Question|AskQuestion]]
+]
+
+(if: $brokenLoop is false)[
+[[Try to leave.|OrientationRoom]]
+]
+(else:)[
+[[A Panel Slides Open|ExitRoom]]
+]
+
+
+::ExitRoom
+<p>You step through the panel into something that might be a hallway... or a metaphor. You are disoriented—but finally free.</p>
+
+[[Start over.|OrientationRoom]]
+
+
+::AskQuestion
+(set: $brokenLoop to true)
+<p>You speak aloud: "Why can't I leave?" The ceiling flickers. The walls ripple like soup. "Because you keep trying the same thing."</p>
+
+[[Return to the Room|OrientationRoom]]
+
+::AskQuestion

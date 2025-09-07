@@ -1,0 +1,126 @@
+::CascadeBranching
+<style>
+.glow-demo {
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #0ff;}
+</style>
+<p>You are completing an online application for a new job.
+**APPLICATION FOR EMPLOYMENT IN THE DEPARTMENT OF VAGUELY DEFINED RESPONSIBILITIES.**
+<span class="glow-demo">How do you prefer to handle abstract problems?</span>
+</style>
+* [[I delegate them to abstract subordinates.|Q2Delegate]]
+* [[I file them under 'pending metaphysics.'|Q2Pending]]
+* [[I eat them. Problems are delicious.|Q2Eat]]
+
+
+::Q2 Delegate
+<style>
+.gold-text {
+  font-weight: bold;
+  background: linear-gradient(90deg, #d4af37, #fff8dc, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+</style>
+<p>The form nods. A second question appears, written in gold ink:
+<span class="gold-text">Your subordinates have unionized. How do you proceed?</span>
+* [[Negotiate with snacks and interpretive dance.|Q3Snacks]]
+* [[Fire everyone and promote your coffee mug.|Q3Mug]]
+
+
+::Q2Pending
+<style>
+.silver-text {
+  font-weight: bold;
+  background: linear-gradient(90deg, #c0c0c0, #ffffff, #a8a8a8, #ffffff, #c0c0c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.2);
+}
+</style>
+<p>The next question is not a question:
+<span="silver-text">Metaphysics is backlogged. You have been reassigned to Emotional Tax Accounting. First client: a cloud that regrets raining.</span>
+* [[Offer condolences and an umbrella.|Q3Umbrella]]
+* [[Redirect it to Grievance Weather.|Q3Redirect]]
+
+
+::Q2Eat
+<style>
+.glow-demo {
+  color: #ff00ff;
+  text-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;}
+</style>
+<p>Delicious. The question tastes like regret and cinnamon. Another question glows:
+<span class="glow-demo">You now feel all unresolved problems within a 2-mile radius. This includes pigeons.</span>
+
+* [[Accept your fate. Hug the pigeons.|Q3PigeonHug]]
+* [[Deny it. Move to a goose-only jurisdiction.|Q3Goose]]
+
+
+::Q3Snacks
+<p>They dance. You are now Minister of Theoretical Negotiation Snacks.</p>
+
+[[Your appointment arrives.|EndingA]]
+
+
+::Q3Umbrella
+<p>The cloud weeps with joy. You are appointed Interim Rain Therapist.</p>
+
+[[Your appointment arrives.|EndingC]]
+
+
+::Q3Redirect
+<p>The cloud becomes mist and escapes.</p>
+
+[[Your appointment arrives.|EndingD]]
+
+
+::Q3PigeonHug
+<p>The pigeons crown you as their sovereign. You reign with crumbs and dignity.</p>
+
+[[Your appointment arrives.|EndingE]]
+
+
+::Q3Goose
+<p>The geese are less forgiving.</p>
+
+[[Your appointment arrives.|EndingF]]
+
+
+::EndingA
+<p>You are now a certified **Snack-Based Negotiation Specialist (Level 2)**. Congratulations. You have no mouth, but you are full.</p>
+
+[[Start over|CascadeBranching]]
+
+
+::EndingB
+<p>The mug sips you. You now reside within its ceramic realm.</p>
+
+[[Start over.|CascadeBranching]]
+
+
+:EndingC
+<p>You become legally stormy.</p>
+
+[[Start over.|CascadeBranching]]
+
+
+::EndingD
+<p>You are demoted to Vapor Analyst.</p>
+
+[[Start over.|CascadeBranching]]
+
+
+::EndingE
+<p>You rule the skies. Your name is cooed on the wind.</p>
+
+[[Start over.|CascadeBranching]]

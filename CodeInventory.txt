@@ -1,0 +1,77 @@
+::VariableInit
+(set: $hasLighthouseHat to false)
+(set: $hasWeatherHat to false)
+(set: $hasBureaucracyHat to false)
+
+::TriggeredInventory
+<p>You sit in a velvet beanbag in the Society’s Hat Retrieval Lounge. The walls hum with judgmental energy. Your mission is to retrieve three hats.
+
+(if: $hasLighthouseHat is false)[
+* [[Investigate the Seagull Lighthouse|Lighthouse]]
+](else:)[
+* You have the Lighthouse Hat!
+]
+
+(if: $hasWeatherHat is false)[
+* [[Descend into the Weather Archive|WeatherArchive]]
+](else:)[
+* You have the Weather Hat!
+]
+
+(if: $hasBureaucracyHat is false)[
+* [[Visit the Department of Recursive Bureaucracy|Bureaucracy]]
+](else:)[
+* You have the Bureaucracy Hat!
+]
+
+(if: $hasWeatherHat is true and $hasLighthouseHat is true and $hasBureaucracyHat is true)[
+* [[Enter the Final Vestibule of Headwear Judgment|FinalVestibule]]
+](else:)[
+* Keep looking for hats!
+]
+</p>
+
+
+::WeatherArchive
+<p>(set: $hasWeatherHat to true)
+You find an old filing cabinet labeled "HURRICANE EMOTIONS." Inside, there is a glistening cap woven from frozen lightning.
+
+You receive: **The Cumulonimbus Beret**
+
+[[Return to Hat HQ|TriggeredInventory]]</p>
+
+
+::Bureaucracy
+(set: $hasBureaucracyHat to true)
+<p>You complete Form 847-B ("Application to Pursue Items of Head-Based Relevance") and then wait in line behind a telepathic slug for four hours. You are approved.
+
+You receive: **The Trilby of Infinite Red Tape**
+
+[[Return to Hat HQ|TriggeredInventory]]</p>
+
+
+::FinalVestibule
+(set: $hasBureaucracyHat to true)
+<p>You complete Form 847-B ("Application to Pursue Items of Head-Based Relevance") and then wait in line behind a telepathic slug for four hours. You are approved.
+
+You receive: **The Trilby of Infinite Red Tape**
+
+[[Return to Hat HQ|TriggeredInventory]]</p>
+
+
+::Ending1
+<p>You vanish in a puff of seawind and legacy. You are now the official Fog Whisperer.
+
+[[Start again.|TriggeredInventory]]</p>
+
+
+::Ending2
+<p>You become a localized microclimate. Weather consults you before storming</p>.
+
+[[Start again.|TriggeredInventory]]</p>
+
+
+::Ending3
+<p>You fill out Form 999-X and are promoted to Minister of Forms About Hats.</p>
+
+[[Start again.|TriggeredInventory]]</p>

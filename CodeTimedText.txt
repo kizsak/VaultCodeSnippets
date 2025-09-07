@@ -1,0 +1,85 @@
+::TimedTextDisplay
+(set: $visitedFridge to false)
+(set: $visitedSink to false)
+(set: $visitedDrawer to false)
+(set: $visitedCrumbs to false)
+
+<p>You awaken as a sentient slice of toast. The map of the world has been buttered over. To unspread the truth, you must travel to four surreal locations.</p>
+
+[[Begin Mapping|Map]]
+
+
+::Refrigerator
+(set: $visitedFridge to true)
+
+<p>You squelch through gelatinous vines.
+(live: 2s)[(print: "\nA wild stick of butter bellows from a tree.")
+(live: 3s)[(print: "\nIt tells you your purpose: “You were never toast. You were *spread* all along.”")
+(live: 3s)[(print: "\nYou receive: **Mayo of Illumination**.")
+(link: "Return to Map")[(goto: 'Map')]
+(stop:)]
+(stop:)]
+(stop:)]
+
+[[Return to Map|Map]]
+
+
+::Map
+<p>You're hovering over a sticky breakfast table. Jam smears point to strange lands.
+• [[Examine the Refrigerator Jungle.|Refridgerator]] (if: $visitedFridge)[✓]  
+• [[Explore the Slow-Boiling Sinkhole|Sinkhole]] (if: $visitedSink)[✓]  
+• [[Take a trip to the Infinite Spoon Drawer|Drawer]] (if: $visitedDrawer)[✓]  
+• [[Get a tour of the Crumb Realm Beneath the Table|Table]] (if: $visitedCrumbs)[✓]  
+
+(if: $visitedFridge is true and $visitedSink is true and $visitedDrawer is true and $visitedCrumbs is true)[
+(live: 2s)[(print: "The jam map twitches.")
+(live: 3s)[(print: "\nA final path opens, crust-first.")
+(live: 1s)[(link: "Enter the Final Slice")[(goto: 'Final Slice')]
+(stop:)]
+(stop:)]
+(stop:)]]
+
+
+::Table
+(set: $visitedCrumbs to true)
+<p>You dive beneath the crust. Ancient crumbs chant your name.
+
+(live: 2s)[(print: "\nA raisin with 14 legs offers you a prophecy.")
+(live: 3s)[(print: "\n“The jam remembers,” it rasps.")
+(live: 3s)[(print: "\nYou acquire: **Crumb of Forgotten Breakfasts**.")
+(link: "Return to Map")[(goto: 'Map')]
+(stop:)]
+(stop:)]
+(stop:)]
+
+[[Return to Map|Map]]
+
+
+::Sinkhole
+(set: $visitedSink to true)
+
+<p>The faucet cries. The sink sighs. Everything is slightly too warm.
+(live: 2s)[(print: "\nAn egg philosopher floats by, muttering about entropy.")
+(live: 3s)[(print: "\n“Poach thyself,” it whispers, then vanishes.")
+(live: 3s)[(print: "\nYou acquire: **Yolk of Temporal Distortion**.")
+(link: "Return to Map")[(goto: 'Map')]
+(stop:)]
+(stop:)]
+(stop:)]
+
+[[Return to Map|Map]]
+
+
+::Drawer
+(set: $visitedDrawer to true)
+
+<p>You open the drawer. Inside is another drawer. And another.
+(live: 2s)[(print: "\nSpoons replicate endlessly, cloning with a metallic giggle.")
+(live: 3s)[(print: "\nYou fall forever until a ladle catches you.")
+(live: 3s)[(print: "\nYou gain: **Spoon of Recursive Logic**.")
+(link: "Return to Map")[(goto: 'Map')]
+(stop:)]
+(stop:)]
+(stop:)]
+
+[[Return to Map|Map]]
